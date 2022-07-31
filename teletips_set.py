@@ -1,8 +1,8 @@
 #Copyright ©️ 2021 TeLe TiPs. All Rights Reserved
 #You are free to use this code in any of your project, but you MUST include the following in your README.md (Copy & paste)
-# ##Credits - [Countdown Timer Telegram bot by TeLe TiPs] (https://github.com/teletips/CountdownTimer-TeLeTiPs)
+# ##Credits - [-] (https://github.com/RavEthaners)
 
-# Changing the code is not allowed! Read GNU AFFERO GENERAL PUBLIC LICENSE: https://github.com/teletips/CountdownTimer-TeLeTiPs/blob/main/LICENSE
+# Changing the code is not allowed! Read GNU AFFERO GENERAL PUBLIC LICENSE: https://github.com/RavEthaners
  
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
@@ -25,15 +25,15 @@ stoptimer = False
 
 TELETIPS_MAIN_MENU_BUTTONS = [
             [
-                InlineKeyboardButton('❓ HELP', callback_data="HELP_CALLBACK")
+                InlineKeyboardButton('ac86', callback_data="HELP_CALLBACKA")
             ],
             [
-                InlineKeyboardButton('👥 SUPPORT', callback_data="GROUP_CALLBACK"),
-                InlineKeyboardButton('📣 CHANNEL', url='https://t.me/teletipsofficialchannel'),
-                InlineKeyboardButton('👨‍💻 CREATOR', url='https://t.me/teIetips')
+                InlineKeyboardButton('b981', callback_data="GROUP_CALLBACKA"),
+                InlineKeyboardButton('shiro', url='https://t.me/ShiroCuter'),
+                InlineKeyboardButton('rav', url='https://t.me/TheEthaners')
             ],
             [
-                InlineKeyboardButton('➕ CREATE YOUR BOT ➕', callback_data="TUTORIAL_CALLBACK")
+                InlineKeyboardButton('c4t3', callback_data="TUTORIAL_CALLBACKA")
             ]
         ]
 
@@ -130,7 +130,7 @@ async def set_timer(client, message):
         if message.chat.id>0:
             return await message.reply('⛔️ Try this command in a **group chat**.')
         elif not (await client.get_chat_member(message.chat.id,message.from_user.id)).privileges:
-            return await message.reply('👮🏻‍♂️ Sorry, **only admins** can execute this command.')    
+            return await message.reply('Sorry, **only shiro** can execute this command.')    
         elif len(message.command)<3:
             return await message.reply('❌ **Incorrect format.**\n\n✅ Format should be like,\n<code> /set seconds "event"</code>\n\n**Example**:\n <code>/set 10 "10 seconds countdown"</code>')    
         else:
@@ -199,7 +199,7 @@ async def stop_timer(Client, message):
             stoptimer = True
             await message.reply('🛑 Countdown stopped.')
         else:
-            await message.reply('👮🏻‍♂️ Sorry, **only admins** can execute this command.')
+            await message.reply('👮🏻‍♂️ Sorry, **only shiro** can execute this command.')
     except FloodWait as e:
         await asyncio.sleep(e.value)
 
